@@ -13,7 +13,7 @@ import java.sql.Date;
 @Table(name = "metering_values")
 public class MeteringValues {
     @Id
-    @Column(name = "id", updatable = false, nullable = false)
+    @Column(name = "id", updatable = false, nullable = false, length = 36)
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     private String id;

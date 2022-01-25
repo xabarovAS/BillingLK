@@ -23,9 +23,9 @@ public class MeteringValueHeaderService {
 
         MeteringValueHeader HeaderDoc = new MeteringValueHeader();
         HeaderDoc.setId(baseMeteringValuesDTO.getObjectBaseID());
-        HeaderDoc.setDate(baseMeteringValuesDTO.getDate());
-        HeaderDoc.setDelete(baseMeteringValuesDTO.isDelete());
-        HeaderDoc.setAction(baseMeteringValuesDTO.getAction());
+        HeaderDoc.setDateEvent(baseMeteringValuesDTO.getDate());
+        HeaderDoc.setDeleteMark(baseMeteringValuesDTO.isDelete());
+        HeaderDoc.setActionMain(baseMeteringValuesDTO.getAction());
         meteringValueHeaderRepository.save(HeaderDoc);
 
         List<MeteringValuesDTO> meteringValuesDTO = baseMeteringValuesDTO.getData();

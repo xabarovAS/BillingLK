@@ -14,19 +14,20 @@ import java.sql.Date;
 @NoArgsConstructor
 @Table(name = "metering_value_header")
 public class MeteringValueHeader {
+
     @Id
     @Column(name = "id", updatable = false, nullable = false)
     private String id;
 
     @Column(nullable = false)
-    private Date Date;
+    private Date dateEvent;
 
-    private boolean Delete;
-
-    @Column(nullable = false)
-    private String Action;
+    private boolean deleteMark;
 
     @Column(nullable = false)
-    private String SourceTestimony;
+    private String actionMain;
+
+    //@Column(nullable = false)
+    //private String sourceValue;
 
 }
