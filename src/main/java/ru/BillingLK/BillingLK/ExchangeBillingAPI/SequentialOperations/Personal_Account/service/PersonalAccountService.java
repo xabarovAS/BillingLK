@@ -56,7 +56,7 @@ public class PersonalAccountService {
         statePersonalAccount.setDateEvent(baseOpeningPersonalAccountdto.getDate());
 
         personalAccountRepository.save(personalAccountMapper.ToModel(openingPersonalAccountdto));
-        var q = 5/0;
+        //var q = 5/0;
         statePersonalAccountRepository.save(statePersonalAccount);
 
         /*
