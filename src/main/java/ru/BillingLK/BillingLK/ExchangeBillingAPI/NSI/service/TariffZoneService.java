@@ -27,15 +27,6 @@ public class TariffZoneService {
         }
     }
 
-    /*public TariffZone findId(String id) throws Exception {
-        UUID ids = UUID.fromString(id);
-        Optional<TariffZone> t = tariffZoneRepository.findById(ids);
-        if (t == null){
-            throw new Exception("Нулл значение");
-        }
-        return t.get();
-    }*/
-
     public List<TariffZone> findAll(){
         return (List<TariffZone>) tariffZoneRepository.findAll();
 

@@ -18,8 +18,17 @@ public class PersonalAccountController {
     private PersonalAccountService personalAccountService;
 
     @PostMapping("/OpeningPersonalAccount")
-    public ResponseEntity OpeningPersonalAccount(@RequestBody BaseOpeningPersonalAccountdto baseOpeningPersonalAccountdto) {
-        var res = personalAccountService.RegistrationOpeningPersonalAccount(baseOpeningPersonalAccountdto);
+    public ResponseEntity OpeningPersonalAccount(@RequestBody BaseOpeningPersonalAccountdto baseOpeningPersonalAccountdto) throws Exception {
+        response res = response.CreateResponse(true, "");
+        personalAccountService.RegistrationOpeningPersonalAccount(baseOpeningPersonalAccountdto);
+
+        /*try {
+            personalAccountService.RegistrationOpeningPersonalAccount(baseOpeningPersonalAccountdto);
+        }
+        catch (Exception ex){
+            res = response.CreateResponse(false, ex.getMessage());
+        }*/
+
         return ResponseEntity.ok(res);
     }
 

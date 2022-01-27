@@ -24,15 +24,15 @@ public class PersonalAccount {
     private String number;
 
     @Column(nullable = false, length = 50)
-    private String FirstName;
+    private String firstName;
 
     @Column(nullable = false, length = 50)
-    private String SecondName;
+    private String secondName;
 
     @Column(nullable = false, length = 50)
-    private String MiddleName;
+    private String middleName;
 
     @Column(nullable = false)
-    private String Address;
+    private String address;
 
 }

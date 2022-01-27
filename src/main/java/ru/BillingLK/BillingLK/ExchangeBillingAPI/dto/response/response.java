@@ -12,7 +12,7 @@ public class response {
 
     public static response CreateResponse(boolean result, String message){
         response res = new response();
-        if (result = true){
+        if (result == true){
             res.setStatus((byte) 1);
         }
         else {
