@@ -21,17 +21,16 @@ public class PaymentController {
     private final PaymentServiceImpl paymentService;
 
     @GetMapping
-    public ResponseEntity GetPayments(){
+    public ResponseEntity<String> GetPayments(){
         return ResponseEntity.ok("work");
     }
 
     @PostMapping("/RegistrationPayment")
     public ResponseEntity RegistrationPayment(@Valid @RequestBody BasePaymentDocumentDTO basePaymentDocumentDTO, @NotNull BindingResult bindingResult) throws Exception {
-        if (bindingResult.hasErrors()){
-            int f = 0;
-        }
+
         paymentService.RegistrationPaymentDocument(basePaymentDocumentDTO);
         return new ResponseEntity(HttpStatus.OK);
+
     }
 
 
